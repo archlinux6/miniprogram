@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/test/test",
+    "pages/results/results",
+    "pages/my/my",
+    "pages/wronglist/wronglist",
+    "pages/about/about",
+    "pages/camera/camera",
+    "pages/result/result",
+    "pages/contact/contact"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#a7d3e8",
+    "navigationBarTitleText": "在线答题",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#666666",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "black",
+    "backgroundColor": "#a7d3e8",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "image/icon_component.png",
+        "selectedIconPath": "image/icon_component_HL.png",
+        "text": "答题"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "iconPath": "image/icon_API.png",
+        "selectedIconPath": "image/icon_API_HL.png",
+        "text": "记录"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "iconPath": "image/my.png",
+        "selectedIconPath": "image/my-active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

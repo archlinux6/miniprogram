@@ -1,0 +1,46 @@
+<!--pages/test/test.wxml-->
+<view class="page">
+  <!--标题-->
+  <view class='page__hd'>
+    <view class="page__title">
+    {{index}}/{{questionList.length-1}}、{{questionList[shuffleIndex[index]].question}}
+      <!-- {{questionList[shuffleIndex[index]].type==1||questionList[shuffleIndex[index]].type==3?"(单选题（题库只给了正确答案）/判断题)":"(多选)"}} -->
+    </view>
+  </view>
+  <!--内容-->
+  <view class="page__bd">
+    <radio-group class="radio-group" bindchange="radioChange" wx:if="{{questionList[shuffleIndex[index]].type == 1}}">
+      <label class="radio my-choosebox" wx:for="{{questionList[shuffleIndex[index]].option}}" wx:for-index="key"  wx:for-item="value">
+        <radio value="{{key}}" checked="{{questionList[shuffleIndex[index]].checked}}"/>{{key}}、{{value}}
+      </label>
+    </radio-group>
+    <checkbox-group bindchange="checkboxChange" wx:elif="{{questionList[shuffleIndex[index]].type == 2}}">
+      <label class="checkbox my-choosebox" wx:for="{{questionList[shuffleIndex[index]].option}}" wx:for-index="key"  wx:for-item="value">
+        <checkbox value="{{key}}" checked="{{questionList[shuffleIndex[index]].checked}}"/>{{key}}、{{value}}
+      </label>
+    </checkbox-group>
+    <radio-group class="radio-group" bindchange="radioChange" wx:else>
+      <label class="radio my-choosebox" wx:for="{{questionList[shuffleIndex[index]].option}}">
+        <radio value="{{item}}" checked="{{questionList[shuffleIndex[index]].checked}}"/>{{item}}
+      </label>
+    </radio-group>
+  </view>
+  <!--按钮-->
+  <view class='page_ft'>
+    <view class='mybutton'>
+   
+      
+      <button bindtap='lastSubmit'  style='margin-bottom: 20rpx;'>上一题</button>
+     
+      <button bindtap='nextSubmit' style='margin-top: 10rpx;' >下一题</button>
+      <text  class="to-btn">选择题目</text>
+      <input value="{{inputData}}"  placeholder="请输入跳转数" bindinput="changeText"></input>
+      <view bindtap="haveSave">
+        <image class="save " src="{{isClick?'/image/like-active.png':'/image/like.png'}}" ></image>
+        <text class="saveText">{{isClick?'取消':'收藏'}}</text>
+     </view>
+     <text bindtap='outTest' class="toindex-btn">退出答题</text>
+      <!-- <text bindtap='add' class="toindex-btn">收藏该题</text> -->
+    </view>
+  </view>
+</view>

@@ -1,0 +1,10 @@
+<view>
+  <camera device-position="back" flash="auto" class="camera" mode=""></camera>
+
+  <cover-view class="bottom">
+    <cover-image src="../images/camera.png" class="img" bindtap="takePhoto"></cover-image>
+  </cover-view>
+
+  <!--canvas-->
+  <canvas canvas-id="myCanvas" style="display:none"></canvas>
+</view>

@@ -1,0 +1,78 @@
+<view class='container'>
+
+
+<view class="partOne">
+  
+  <view class="userinfo">
+    <block wx:if="{{canIUseOpenData}}">
+      <view class="userinfo-avatar">
+        <open-data type="userAvatarUrl"></open-data>
+      </view>
+      <open-data type="userNickName"></open-data>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+   
+  </view>
+
+
+</view>
+
+
+<view class="partTwo">
+
+  <view class="item">
+    <view class="itemname">
+      <view ><image src="/image/myinf.png" /></view>
+      <view ><text class="contacts" open-type="contact" bindtap ="handleContact"  >联系客服</text></view>
+    </view>
+    <view class="right"><image  bindtap="handleContact" src="/image/right.png" /></view>
+    
+  </view>
+  <view class="item">
+    <view class="itemname">
+      <view ><image src="/image/about.png" /></view>
+      <view ><text class = "about"  bindtap = "aboutmy">关于这个</text></view>
+    </view>
+    <view class="right"><image  bindtap = "aboutmy" src="/image/right.png" /></view>
+    
+  </view>
+</view>
+
+<!--关于我们、使用帮助、绑定个人信息-->
+<view class="partThree">
+  <!--关于我们-->
+  <view class="item">
+    <view class="itemname">
+      <view ><image src="/image/note.png" /></view>
+      <view ><text bindtap = "addwrong" >我的笔记</text></view>
+    </view>
+    <view class="right"><image  bindtap = "addwrong" src="/image/right.png" /></view>
+  </view>
+
+  <view class="item">
+    <view class="itemname">
+      <view ><image src="/image/wrong.png" /></view>
+      <view ><text bindtap = "addwrong" class="addmy" >我的错题</text></view>
+    </view>
+    <view class="right"><image  bindtap = "addwrong"  src="/image/right.png" /></view>
+  </view>
+
+  <view class="item">
+    <view class="itemname">
+      <view ><image src="/image/fav.png" /></view>
+      <view ><text bindtap = "addmy" class="addmy">我的收藏</text></view>
+    </view>
+    <view class="right"><image  bindtap = "addmy" src="/image/right.png" /></view>
+  </view>
+</view>
+
+</view>
+

@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "在线答题",
+  "usingComponents": {
+    "wrong-modal":"/components/wrongModal/wrongModal"
+  }
+}

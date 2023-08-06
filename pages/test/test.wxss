@@ -1,0 +1,53 @@
+/* pages/test/test.wxss */
+.page {
+  padding: 20rpx;
+}
+.page__bd {
+  padding: 20rpx;
+}
+.my-choosebox {
+  display: block;
+  margin-bottom: 20rpx;
+}
+.toindex-btn {
+  margin-top: 20rpx;
+  display:inline-block;
+  line-height:2.3;
+  font-size:13px;
+  padding:0 1.34em;
+  color:#576b95;
+  text-decoration:underline;
+  float: right;
+}
+
+.to-btn {
+  margin-top: 20rpx;
+  display:inline-block;
+  line-height:2.3;
+  font-size:13px;
+  padding:0 1.34em;
+  color:#576b95;
+  text-decoration:underline;
+  float: left;
+}
+.save{
+  width: 50rpx;
+  height: 50rpx;
+  float: left;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+}
+.saveText{
+  margin-top: 25rpx;
+  font-size:10px;
+  line-height:2.3;
+  padding:0 0.3em;
+  float: left;
+}
+input{
+  margin-top: 20rpx;
+  width: 200rpx;
+  float: left;
+  border: 2rpx solid black;
+}
+
